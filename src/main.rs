@@ -9,13 +9,17 @@ struct Handler;
 
 impl EventHandler for Handler {
     fn message(&self, ctx: Context, mut new_message: Message) {
-        if new_message.content.starts_with("Ich bin ") {
+        if new_message.content.to_lowercase().starts_with("ich bin ") {
             let new_string = new_message.content.split_off(8);
             let _ = new_message.channel_id.say(&ctx.http, format!("Hallo {}, ich bin Vater!", new_string));
         }
 
+        if new_message.content.contains("simp") {
+            let _ = new_message.channel_id.say(&ctx.http, "https://i.specx.dev/GOFu4/TAdiZOpO65.png");
+        }
+
         if new_message.content.starts_with("!einladung") {
-            let _ = new_message.channel_id.say(&ctx.http, "Hol dir jetzt den besten Bot auf Discord\nhttps://discordapp.com/api/oauth2/authorize?client_id=698244880970940488&permissions=3072&scope=bot");
+            let _ = new_message.channel_id.say(&ctx.http, "Hol dir jetzt den besten Bot auf Discord\nhttps://discord.com/oauth2/authorize?client_id=731548374410461254&permissions=3072&scope=bot"));
         }
     }
 
