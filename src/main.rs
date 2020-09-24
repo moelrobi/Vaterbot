@@ -19,7 +19,7 @@ impl EventHandler for Handler {
         }
 
         if new_message.content.starts_with("!einladung") {
-            let _ = new_message.channel_id.say(&ctx.http, "Hol dir jetzt den besten Bot auf Discord\nhttps://discord.com/oauth2/authorize?client_id=731548374410461254&permissions=3072&scope=bot"));
+            let _ = new_message.channel_id.say(&ctx.http, "Hol dir jetzt den besten Bot auf Discord\nhttps://discord.com/oauth2/authorize?client_id=731548374410461254&permissions=3072&scope=bot");
         }
     }
 
