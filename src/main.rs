@@ -14,10 +14,6 @@ impl EventHandler for Handler {
             let _ = new_message.channel_id.say(&ctx.http, format!("Hallo {}, ich bin Vater!", new_string));
         }
 
-        if new_message.content.contains("simp") {
-            let _ = new_message.channel_id.say(&ctx.http, "https://i.specx.dev/GOFu4/TAdiZOpO65.png");
-        }
-
         if new_message.content.starts_with("!einladung") {
             let _ = new_message.channel_id.say(&ctx.http, "Hol dir jetzt den besten Bot auf Discord\nhttps://discord.com/oauth2/authorize?client_id=731548374410461254&permissions=3072&scope=bot");
         }
